@@ -41,7 +41,10 @@ function sortearAmigo() {
     else {
         let indiceMaximo = amigos.length;
         let indiceSecreto = parseInt(Math.floor(Math.random() * indiceMaximo));
-        document.getElementById('resultado').innerHTML = amigos[indiceSecreto];
+        document.getElementById('resultado').innerHTML = 
+            `O amigo secreto sorteado é: ${amigos[indiceSecreto]}`;
         limparCampo();
+        document.getElementById('nomeAmigos').innerHTML = '';
+        amigos=[];
     }
 }
